@@ -226,7 +226,7 @@ class PyramidVisionTransformerImpr(nn.Module):
                                               embed_dim=embed_dims[3])
 
         # transformer encoder
-        dpr = [x.item() for x in jt.linspace(0, drop_path_rate, sum(depths))]  # stochastic depth decay rule
+        dpr = [x for x in jt.linspace(0, drop_path_rate, sum(depths)).numpy()]
         cur = 0
         self.block1 = nn.ModuleList([Block(
             dim=embed_dims[0], num_heads=num_heads[0], mlp_ratio=mlp_ratios[0], qkv_bias=qkv_bias, qk_scale=qk_scale,

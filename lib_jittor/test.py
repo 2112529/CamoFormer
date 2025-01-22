@@ -30,8 +30,8 @@ for _data_name in ['CAMO', 'COD10K', 'CHAMELEON', 'NC4K']:
 
     for image, gt, name, _ in test_loader:
         gt /= (gt.max() + 1e-08)
-        (res5, res4, res3, res2,res) = model(image)
-
+        res5, res4, res3, res2,res = model(image)
+        # pred = torch.sigmoid(res[0,0]).cpu().numpy()*255
         c, h, w = gt.shape
         res = nn.upsample(res, size=(h, w), mode='bilinear')
         res = res.sigmoid().data.squeeze()

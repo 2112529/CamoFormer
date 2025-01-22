@@ -18,42 +18,32 @@ A simple way to debug and run the script is running a new command in the contain
 
 + For testing, run `python test.py`. 
 
-> Note that the Jittor model is just converted from the original PyTorch model via toolbox, and thus, the trained weights of PyTorch model can be used to the inference of Jittor model.
+> Note that the Jittor model is just converted from the original PyTorch model via 'snapshot/convert_pkl.py', and thus, the trained weights of PyTorch model can be used to the inference of Jittor model.
 
 ## Performance Comparison
 
 The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/drive/folders/1XTVMbFWmKtp3lWSlQ7XznmHHHjq5-xkp) / [Jittor](https://drive.google.com/file/d/13DeX-IMFE6u0TnNG5blUvHzo5o21cVpc/view?usp=sharing)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
 
-| CHAMELEON dataset    	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
+| CHAMELEON dataset    	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
-| PyTorch              	| 0.888       	| 0.942     	| 0.816        	| 0.030 	|
-| Jittor               	| 0.890      	| 0.943       	| 0.819        	| 0.030    	|
+| PyTorch              	| 0.910       	| 0.970     	| 0.865        	| 0.022 	|
+| Jittor               	| 0.896      	| 0.935       	| 0.808        	| 0.034    	|
 
-|  CAMO-Test dataset   	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
+|  CAMO-Test dataset   	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.820       	| 0.882     	| 0.743        	| 0.070 	|
-|  Jittor              	| 0.820       	| 0.881     	| 0.743        	| 0.070 	|
+|  PyTorch             	| 0.872       	| 0.931     	| 0.831        	| 0.046 	|
+|  Jittor              	| 0.873       	| 0.92     	| 0.797        	| 0.054 	|
 
-|  COD10K-Test dataset 	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
+|  COD10K-Test dataset 	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.815       	| 0.887     	| 0.680        	| 0.037 	|
-|  Jittor              	| 0.816       	| 0.888     	| 0.681        	| 0.037 	|
+|  PyTorch             	| 0.869       	| 0.931     	| 0.786        	| 0.023 	|
+|  Jittor              	| 0.856       	| 0.887     	| 0.727        	| 0.03 	|
 
-|  NC4K dataset        	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
+|  NC4K dataset        	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.815       	| 0.887     	| 0.680        	| 0.037 	|
-|  Jittor              	| 0.816       	| 0.888     	| 0.681        	| 0.037 	|
+|  PyTorch             	| 0.892       	| 0.941     	| 0.847        	| 0.030 	|
+|  Jittor              	| 0.882       	| 0.917     	| 0.801        	| 0.04 	|
 
-## Speedup
-
-The jittor-based code can speed up the inference efficiency.
-
-| Batch Size  	|     PyTorch    	|     Jittor     	|     Speedup    	|
-|-----------	|----------------	|----------------	|----------------	|
-|     1     	|     52 FPS     	|     70 FPS     	|     1.35x       	|
-|     4     	|     181 FPS    	|     275 FPS    	|     1.52x       	|
-|     8     	|     372 FPS    	|     509 FPS    	|     1.37x      	|
-|     16    	|     466 FPS    	|     577 FPS    	|     1.24x       	|
 
 ## Citation
 

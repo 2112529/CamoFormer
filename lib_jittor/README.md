@@ -22,7 +22,7 @@ A simple way to debug and run the script is running a new command in the contain
 
 ## Performance Comparison
 
-The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/drive/folders/1XTVMbFWmKtp3lWSlQ7XznmHHHjq5-xkp) / [Jittor](https://drive.google.com/file/d/13DeX-IMFE6u0TnNG5blUvHzo5o21cVpc/view?usp=sharing)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
+The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/drive/folders/1XTVMbFWmKtp3lWSlQ7XznmHHHjq5-xkp) / [Jittor](https://drive.google.com/file/d/18izUmDF2-wG_-hita0IApIIbxLT-L52j/view?usp=drive_link)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
 
 | CHAMELEON dataset    	| $S_m$  	    | $\alpha E$  | $F_\beta^w$  	| M     	|
 |----------------------	|-------------|-----------	|--------------	|-------	|

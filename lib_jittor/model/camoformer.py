@@ -11,7 +11,7 @@ class CamoFormer(jt.nn.Module):
         self.cfg = cfg
         self.encoder = pvt_v2_b4()
         if load_path is not None:
-            pretrained_dict = jt.load(load_path)  # 加载预训练模型
+            pretrained_dict = jt.load(load_path) 
             pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in self.encoder.state_dict()}
             self.encoder.load_parameters(pretrained_dict)
             print('Pretrained encoder loaded.')
@@ -64,22 +64,17 @@ class CamoFormer(jt.nn.Module):
                 if hasattr(m, 'initialize'):
                     m.initialize()
 if __name__ == "__main__":
-    # Define a mock configuration
     class Config:
         def __init__(self):
             self.snapshot = None
 
-    # Instantiate the model with a dummy configuration
     cfg = Config()
     model = CamoFormer(cfg)
 
-    # Create a dummy input tensor
     input_tensor = jt.rand(1, 3, 256, 256)  # Batch size 1, 3 channels, 256x256 resolution
 
-    # Forward pass through the model
     P5, P4, P3, P2, P1 = model(input_tensor)
 
-    # Print the shapes of the intermediate outputs
     print("Intermediate output shapes:")
     print(f"P5: {P5.shape}")
     print(f"P4: {P4.shape}")

@@ -1,9 +1,9 @@
 import jittor as jt
 from jittor import nn
 
-from encoder.swin import SwinTransformer
-from encoder.pvtv2 import pvt_v2_b4
-from decoder.decoder import Decoder
+from .encoder.swin import SwinTransformer
+from .encoder.pvtv2 import pvt_v2_b4
+from .decoder.decoder import Decoder
 
 class CamoFormer(jt.nn.Module):
     def __init__(self, cfg, load_path=None):
@@ -37,8 +37,8 @@ class CamoFormer(jt.nn.Module):
 
     def initialize(self):
         if self.cfg is not None:
-            if self.cfg.snapshot:
-                self.load_parameters(jt.load(self.cfg.snapshot))
+            if self.cfg.pth_path:
+                self.load_state_dict(jt.load(self.cfg.pth_path))
         else:
             self.weight_init()
 

@@ -22,7 +22,7 @@ A simple way to debug and run the script is running a new command in the contain
 
 ## Performance Comparison
 
-The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/file/d/1I3vKdcjafkTb2U2pOke07khurXxqLpzR/view?usp=sharing) / [Jittor](https://drive.google.com/file/d/13DeX-IMFE6u0TnNG5blUvHzo5o21cVpc/view?usp=sharing)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
+The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/drive/folders/1XTVMbFWmKtp3lWSlQ7XznmHHHjq5-xkp) / [Jittor](https://drive.google.com/file/d/13DeX-IMFE6u0TnNG5blUvHzo5o21cVpc/view?usp=sharing)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
 
 | CHAMELEON dataset    	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
@@ -35,6 +35,11 @@ The performance has slight difference due to the different operator implemented 
 |  Jittor              	| 0.820       	| 0.881     	| 0.743        	| 0.070 	|
 
 |  COD10K-Test dataset 	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
+|----------------------	|-------------	|-----------	|--------------	|-------	|
+|  PyTorch             	| 0.815       	| 0.887     	| 0.680        	| 0.037 	|
+|  Jittor              	| 0.816       	| 0.888     	| 0.681        	| 0.037 	|
+
+|  NC4K dataset        	| $S_\alpha$  	| $E_\phi$  	| $F_\beta^w$  	| M     	|
 |----------------------	|-------------	|-----------	|--------------	|-------	|
 |  PyTorch             	| 0.815       	| 0.887     	| 0.680        	| 0.037 	|
 |  Jittor              	| 0.816       	| 0.888     	| 0.681        	| 0.037 	|

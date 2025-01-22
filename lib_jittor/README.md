@@ -24,25 +24,25 @@ A simple way to debug and run the script is running a new command in the contain
 
 The performance has slight difference due to the different operator implemented between two frameworks.  The download link ([Pytorch](https://drive.google.com/drive/folders/1XTVMbFWmKtp3lWSlQ7XznmHHHjq5-xkp) / [Jittor](https://drive.google.com/file/d/13DeX-IMFE6u0TnNG5blUvHzo5o21cVpc/view?usp=sharing)) of prediction results on four testing dataset, including CHAMELEON, CAMO, COD10K, NC4K.
 
-| CHAMELEON dataset    	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
-|----------------------	|-------------	|-----------	|--------------	|-------	|
-| PyTorch              	| 0.910       	| 0.970     	| 0.865        	| 0.022 	|
-| Jittor               	| 0.896      	| 0.935       	| 0.808        	| 0.034    	|
+| CHAMELEON dataset    	| $S_m$  	    | $\alpha E$  | $F_\beta^w$  	| M     	|
+|----------------------	|-------------|-----------	|--------------	|-------	|
+| PyTorch              	| 0.910     	| 0.970     	| 0.865        	| 0.022 	|
+| Jittor               	| 0.896      	| 0.935       | 0.808        	| 0.034  	|
 
-|  CAMO-Test dataset   	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
-|----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.872       	| 0.931     	| 0.831        	| 0.046 	|
-|  Jittor              	| 0.873       	| 0.92     	| 0.797        	| 0.054 	|
+|  CAMO-Test dataset   	| $S_m$  	    | $\alpha E$  | $F_\beta^w$  	| M     	|
+|----------------------	|-------------|-----------	|--------------	|-------	|
+|  PyTorch             	| 0.872       | 0.931     	| 0.831        	| 0.046 	|
+|  Jittor              	| 0.873       | 0.92     	  | 0.797        	| 0.054 	|
 
-|  COD10K-Test dataset 	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
-|----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.869       	| 0.931     	| 0.786        	| 0.023 	|
-|  Jittor              	| 0.856       	| 0.887     	| 0.727        	| 0.03 	|
+|  COD10K-Test dataset 	| $S_m$  	    | $\alpha E$  | $F_\beta^w$  	| M     	|
+|----------------------	|-------------|-----------	|--------------	|-------	|
+|  PyTorch             	| 0.869       | 0.931     	| 0.786        	| 0.023 	|
+|  Jittor              	| 0.856       | 0.887     	| 0.727        	| 0.03  	|
 
-|  NC4K dataset        	| $S_m$  	| $\alpha E$  	| $F_\beta^w$  	| M     	|
-|----------------------	|-------------	|-----------	|--------------	|-------	|
-|  PyTorch             	| 0.892       	| 0.941     	| 0.847        	| 0.030 	|
-|  Jittor              	| 0.882       	| 0.917     	| 0.801        	| 0.04 	|
+|  NC4K dataset        	| $S_m$  	    | $\alpha E$  | $F_\beta^w$  	| M     	|
+|----------------------	|-------------|-----------	|--------------	|-------	|
+|  PyTorch             	| 0.892       | 0.941     	| 0.847        	| 0.030 	|
+|  Jittor              	| 0.882       | 0.917     	| 0.801        	| 0.04  	|
 
 
 ## Citation
@@ -69,4 +69,4 @@ If you find our work useful in your research, please consider citing:
     }
 
 ## Acknowlegement
-Thanks [Ge](https://gewelsji.github.io/) providing a friendly [jittor-codebase](https://github.com/GewelsJI/SINet-V2/tree/main/jittor_lib) for Camoflaged Object Detection. And our code is built based on it. 
+Thanks [Ge-Peng Ji](https://gewelsji.github.io/) providing a friendly [jittor-codebase](https://github.com/GewelsJI/SINet-V2/tree/main/jittor_lib) for Camoflaged Object Detection. And our code is built based on it. 
